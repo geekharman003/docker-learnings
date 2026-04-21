@@ -1,0 +1,16 @@
+{
+  "name": "docker-learnings",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "whenever we create a project on our machine we install certain dependencies like runtime environment, database, os specific libraries.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
