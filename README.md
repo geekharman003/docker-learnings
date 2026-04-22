@@ -1,4 +1,4 @@
-## PART - 1
+# PART - 1
 ### problem statement
 whenever we create a project on our machine we install certain dependencies like runtime environment, database, os specific libraries.
 
@@ -108,10 +108,31 @@ to start all containers use command:
 
 ```docker compose down``` -> shut down and delete all containers
 
+&ensp;
+# PART 2
+
+### docker networking
+docker networking is a system that allows multiple containers to communicate with each other or with the host machine.
+
+#### bridge network
+ this is the default network driver for containers.
+ it creates a bridge b/w the host machine and containers, so containers get the internet access throught that bridge.they can't directly connect with the host machine.
+ containers can communicate with each other if they are on the same bridge network.
+ we also have to expose the ports so that they can be accessible from host machine.
 
 
+ \
+ to check available network drivers use command: \
+ ```docker network ls```
 
+ #### host network
+ when container uses host network driver they directly connected with the host machine network.no seperate ip is assigned for containers.
 
+ #### none network
+ if container uses none network then they can't able to communicate over the network.none driver disables the networking.
 
+#### custom bridge network
+we can create custom bridge network also instead of using default bridge.custom bridge network are useful if we want to run same type of applications on same network.
 
-
+to create a custom bridge, use command:
+```docker network create my-bridge```
